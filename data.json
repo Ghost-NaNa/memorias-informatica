@@ -1,51 +1,85 @@
 {
+    "students": [
+    {
+      "name": "Dr.house",
+      "photo": "assets/photos/house.jpg"
+    },
+    {
+      "name": "Bruno Gomes",
+      "photo": "assets/photos/aluno2.jpg"
+    },
+    {
+      "name": "Carla Dias",
+      "photo": "assets/photos/aluno3.jpg"
+    },
+    {
+      "name": "Daniel Lima",
+      "photo": "assets/photos/aluno4.jpg"
+    },
+    {
+      "name": "Eduarda Mota",
+      "photo": "assets/photos/aluno5.jpg"
+    },
+    {
+      "name": "Felipe Barros",
+      "photo": "assets/photos/aluno6.jpg"
+    },
+    {
+      "name": "Gabriela Rocha",
+      "photo": "assets/photos/aluno7.jpg"
+    },
+    {
+      "name": "Heitor Borges",
+      "photo": "assets/photos/aluno8.jpg"
+    }
+  ],
   "memories": [
     {
       "category": "turma",
       "thumbnail": "thumbnails/memoria1.jpg",
-      "video": "videos/memoria1.mp4",
+      "video": "assets/videos/memoria1.mp4",
       "title": "Viagem de Formatura"
     },
     {
       "category": "eventos",
       "thumbnail": "thumbnails/memoria2.jpg",
-      "video": "videos/memoria2.mp4",
+      "video": "assets/videos/memoria2.mp4",
       "title": "Festa Junina"
     },
     {
       "category": "turma",
       "thumbnail": "thumbnails/memoria3.jpg",
-      "video": "videos/memoria3.mp4",
+      "video": "assets/videos/memoria3.mp4",
       "title": "Intervalo Divertido"
     },
     {
       "category": "professores",
       "thumbnail": "thumbnails/memoria4.jpg",
-      "video": "videos/memoria4.mp4",
+      "video": "assets/videos/memoria4.mp4",
       "title": "Homenagem ao Prof. Carlos"
     },
     {
       "category": "eventos",
       "thumbnail": "thumbnails/memoria5.jpg",
-      "video": "videos/memoria5.mp4",
+      "video": "assets/videos/memoria5.mp4",
       "title": "Gincana Escolar"
     },
     {
       "category": "turma",
       "thumbnail": "thumbnails/memoria6.jpg",
-      "video": "videos/memoria6.mp4",
+      "video": "assets/videos/memoria6.mp4",
       "title": "Apresentação de Biologia"
     },
     {
       "category": "eventos",
       "thumbnail": "thumbnails/memoria7.jpg",
-      "video": "videos/memoria7.mp4",
+      "video": "assets/videos/memoria7.mp4",
       "title": "Feira de Ciências"
     },
     {
       "category": "professores",
       "thumbnail": "thumbnails/memoria8.jpg",
-      "video": "videos/memoria8.mp4",
+      "video": "assets/videos/memoria8.mp4",
       "title": "Despedida da Profa. Ana"
     }
   ]
