@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anuário Digital</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=VT323&display=swap" rel="stylesheet">
+</head><body>
+
+  <div class="container">
+    <header class="site-header">
+      <h1 class="title">MEMÓRIAS DO INFO</h1>
+      <nav class="main-nav">
+        <a href="#" class="nav-item active" data-category="turma">Turma</a>
+        <a href="#" class="nav-item" data-category="professores">Professores</a>
+        <a href="#" class="nav-item" data-category="eventos">Eventos</a>
+        <a href="#" class="nav-item" data-category="todos">Ver Todos</a>
+      </nav>
+    </header>
+
+    <main class="gallery-grid" id="gallery-grid"></main>
+  </div>
+
+  <div class="modal" id="video-modal">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <video id="modal-video-player" controls preload="metadata">
+        </video>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
