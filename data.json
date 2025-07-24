@@ -1,5 +1,5 @@
 {
-    "students": [
+  "students": [
     {
       "name": "Dr.house",
       "photo": "assets/photos/house.jpg"
@@ -33,54 +33,36 @@
       "photo": "assets/photos/aluno8.jpg"
     }
   ],
+  "teachers": [
+    {
+      "name": "Prof. Carlos",
+      "photo": "assets/photos/prof1.jpg"
+    },
+    {
+      "name": "Profa. Ana",
+      "photo": "assets/photos/prof2.jpg"
+    },
+    {
+      "name": "Prof. Roberto",
+      "photo": "assets/photos/prof3.jpg"
+    },
+    {
+      "name": "Profa. Márcia",
+      "photo": "assets/photos/prof4.jpg"
+    }
+  ],
   "memories": [
     {
-      "category": "turma",
-      "thumbnail": "thumbnails/memoria1.jpg",
-      "video": "assets/videos/memoria1.mp4",
-      "title": "Viagem de Formatura"
+      "category": "eventos",
+      "thumbnail": "assets/thumbnails/interclasse.jpg",
+      "video": "videos/memoria1.mp4",
+      "title": "Interclasse"
     },
     {
       "category": "eventos",
-      "thumbnail": "thumbnails/memoria2.jpg",
-      "video": "assets/videos/memoria2.mp4",
-      "title": "Festa Junina"
-    },
-    {
-      "category": "turma",
-      "thumbnail": "thumbnails/memoria3.jpg",
-      "video": "assets/videos/memoria3.mp4",
-      "title": "Intervalo Divertido"
-    },
-    {
-      "category": "professores",
-      "thumbnail": "thumbnails/memoria4.jpg",
-      "video": "assets/videos/memoria4.mp4",
-      "title": "Homenagem ao Prof. Carlos"
-    },
-    {
-      "category": "eventos",
-      "thumbnail": "thumbnails/memoria5.jpg",
-      "video": "assets/videos/memoria5.mp4",
-      "title": "Gincana Escolar"
-    },
-    {
-      "category": "turma",
-      "thumbnail": "thumbnails/memoria6.jpg",
-      "video": "assets/videos/memoria6.mp4",
-      "title": "Apresentação de Biologia"
-    },
-    {
-      "category": "eventos",
-      "thumbnail": "thumbnails/memoria7.jpg",
-      "video": "assets/videos/memoria7.mp4",
-      "title": "Feira de Ciências"
-    },
-    {
-      "category": "professores",
-      "thumbnail": "thumbnails/memoria8.jpg",
-      "video": "assets/videos/memoria8.mp4",
-      "title": "Despedida da Profa. Ana"
+      "thumbnail": "assets/thumbnails/interclasse.jpg",
+      "video": "videos/memoria1.mp4",
+      "title": "Interclasse"
     }
   ]
 }

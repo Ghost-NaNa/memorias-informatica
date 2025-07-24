@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let allMemories = [];
   let allStudents = [];
+  let allTeachers = []; // Nova variável para os professores
 
-  // FUNÇÃO 1: CRIAR CARD DE VÍDEO
+  // FUNÇÃO 1: CRIAR CARD DE VÍDEO (sem alterações)
   const createVideoCard = (memory) => {
     const card = document.createElement('div');
-    card.className = 'card video-card'; // Adicionada classe específica
+    card.className = 'card video-card';
     card.dataset.videoSrc = memory.video;
     card.innerHTML = `
       <div class="card-overlay"></div>
@@ -24,18 +25,19 @@ document.addEventListener('DOMContentLoaded', () => {
     return card;
   };
 
-  // FUNÇÃO 2: CRIAR CARD DE ALUNO (NOVA)
-  const createStudentCard = (student) => {
+  // FUNÇÃO 2: CRIAR CARD DE PERFIL (Genérica para Alunos e Professores)
+  const createPersonCard = (person) => {
     const card = document.createElement('div');
-    card.className = 'card student-card'; // Classe específica para alunos
+    // Reutilizamos a classe .student-card que já tem o estilo que queremos
+    card.className = 'card student-card'; 
     card.innerHTML = `
-      <img class="student-photo" src="${student.photo}" alt="${student.name}">
-      <p class="student-name">${student.name}</p>
-    `;
+  <img class="student-photo" src="${person.photo}" onerror="this.onerror=null; this.src='assets/photos/placeholderPerson.png';" alt="${person.name}">
+  <p class="student-name">${person.name}</p>
+`;
     return card;
   };
   
-  // RENDERIZADOR 1: VÍDEOS
+  // RENDERIZADOR 1: VÍDEOS (sem alterações)
   const renderVideos = (filter) => {
     galleryGrid.innerHTML = '';
     const filteredMemories = allMemories.filter(memory => memory.category === filter);
@@ -45,11 +47,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  // RENDERIZADOR 2: ALUNOS (NOVO)
+  // RENDERIZADOR 2: ALUNOS
   const renderStudents = () => {
     galleryGrid.innerHTML = '';
     allStudents.forEach(student => {
-      const card = createStudentCard(student);
+      // Agora chama a função genérica
+      const card = createPersonCard(student);
+      galleryGrid.appendChild(card);
+    });
+  };
+
+  // RENDERIZADOR 3: PROFESSORES (NOVO)
+  const renderTeachers = () => {
+    galleryGrid.innerHTML = '';
+    allTeachers.forEach(teacher => {
+      // Também chama a função genérica
+      const card = createPersonCard(teacher);
       galleryGrid.appendChild(card);
     });
   };
@@ -78,9 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const category = item.dataset.category;
       
       if (category === 'alunos') {
-        renderStudents(); // Chama o renderizador de alunos
+        renderStudents();
+      } else if (category === 'professores') { // Novo "else if"
+        renderTeachers();
       } else {
-        renderVideos(category); // Chama o renderizador de vídeos
+        renderVideos(category);
       }
     });
   });
@@ -90,11 +105,11 @@ document.addEventListener('DOMContentLoaded', () => {
     try {
       const response = await fetch('data.json');
       const data = await response.json();
-      allStudents = data.students; // Carrega os alunos
-      allMemories = data.memories; // Carrega os vídeos
+      allStudents = data.students;
+      allTeachers = data.teachers; // Carrega os professores
+      allMemories = data.memories;
       
-      // Inicia mostrando a página de alunos por padrão
-      renderStudents();
+      renderStudents(); // Continua iniciando pela página de alunos
     } catch (error) {
       console.error('Erro ao carregar os dados:', error);
       galleryGrid.innerHTML = '<p>Não foi possível carregar o conteúdo. Tente novamente mais tarde.</p>';
