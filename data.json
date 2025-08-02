@@ -39,7 +39,7 @@
       "photo": "assets/photos/prof1.jpg"
     },
     {
-      "name": "Profa. Ingride",
+      "name": "Profa. Ingryde",
       "photo": "assets/photos/prof2.jpg"
     },
     {
@@ -47,7 +47,7 @@
       "photo": "assets/photos/prof3.jpg"
     },
     {
-      "name": "Profa. Everson",
+      "name": "Prof. Everson",
       "photo": "assets/photos/prof4.jpg"
     }
   ],
@@ -60,9 +60,21 @@
     },
     {
       "category": "eventos",
-      "thumbnail": "assets/thumbnails/interclasse.jpg",
+      "thumbnail": "assets/thumbnails/integrainfo.jpg",
       "video": "videos/memoria1.mp4",
-      "title": "Interclasse"
+      "title": "Integração 2025"
+    },
+    {
+      "category": "eventos",
+      "thumbnail": "assets/thumbnails/diadeaula.jpg",
+      "video": "videos/memoria1.mp4",
+      "title": "Dia de aula"
+    },
+    {
+      "category": "eventos",
+      "thumbnail": "assets/thumbnails/dedetata.jpg",
+      "video": "videos/memoria1.mp4",
+      "title": "Os cara que dança"
     }
   ]
 }
