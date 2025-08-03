@@ -1,7 +1,7 @@
 {
   "students": [
     {
-      "name": "Dr.house",
+      "name": "Raissa",
       "photo": "assets/photos/house.jpg"
     },
     {
@@ -55,25 +55,25 @@
     {
       "category": "eventos",
       "thumbnail": "assets/thumbnails/interclasse.jpg",
-      "video": "videos/memoria1.mp4",
+      "video": "assets/videos/interclasse.mp4",
       "title": "Interclasse"
     },
     {
       "category": "eventos",
       "thumbnail": "assets/thumbnails/integrainfo.jpg",
-      "video": "videos/memoria1.mp4",
+      "video": "assets/videos/integracao.mp4",
       "title": "Integração 2025"
     },
     {
       "category": "eventos",
       "thumbnail": "assets/thumbnails/diadeaula.jpg",
-      "video": "videos/memoria1.mp4",
+      "video": "assets/videos/aula.mp4",
       "title": "Dia de aula"
     },
     {
       "category": "eventos",
       "thumbnail": "assets/thumbnails/dedetata.jpg",
-      "video": "videos/memoria1.mp4",
+      "video": "assets/videos/tarsisderik.mp4",
       "title": "Os cara que dança"
     }
   ]
