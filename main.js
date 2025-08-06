@@ -7,13 +7,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let allMemories = [];
   let allStudents = [];
-  let allTeachers = []; // Nova variável para os professores
+  let allTeachers = [];
 
-  // FUNÇÃO 1: CRIAR CARD DE VÍDEO (sem alterações)
+  // FUNÇÃO 1: CRIAR CARD DE VÍDEO (MODIFICADA)
   const createVideoCard = (memory) => {
     const card = document.createElement('div');
     card.className = 'card video-card';
-    card.dataset.videoSrc = memory.video;
+
+    // Verifica se o título começa com "SPf" (ignorando maiúsculas/minúsculas)
+    const isSpfCard = memory.title.toLowerCase().startsWith('spf');
+
+    if (isSpfCard) {
+      // Se for um card de SPf, o clique levará para a nova página
+      card.addEventListener('click', () => {
+        // Extrai o nome da SPf para usar na URL
+        const spfName = memory.title.toLowerCase();
+        window.location.href = `spf.html?category=${encodeURIComponent(spfName)}`;
+      });
+    } else {
+      // Para outros vídeos, mantém o comportamento do modal
+      card.dataset.videoSrc = memory.video;
+      card.addEventListener('click', () => openModal(memory.video));
+    }
+    
     card.innerHTML = `
       <div class="card-overlay"></div>
       <img src="${memory.thumbnail}" alt="${memory.title}">
@@ -21,47 +37,44 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="card-title">${memory.title}</p>
       </div>
     `;
-    card.addEventListener('click', () => openModal(memory.video));
     return card;
   };
 
-  // FUNÇÃO 2: CRIAR CARD DE PERFIL (Genérica para Alunos e Professores)
+  // FUNÇÃO 2: CRIAR CARD DE PESSOA (sem alterações)
   const createPersonCard = (person) => {
     const card = document.createElement('div');
-    // Reutilizamos a classe .student-card que já tem o estilo que queremos
     card.className = 'card student-card'; 
     card.innerHTML = `
-  <img class="student-photo" src="${person.photo}" onerror="this.onerror=null; this.src='assets/photos/placeholderPerson.png';" alt="${person.name}">
-  <p class="student-name">${person.name}</p>
-`;
+      <img class="student-photo" src="${person.photo}" onerror="this.onerror=null; this.src='assets/photos/placeholderPerson.png';" alt="${person.name}">
+      <p class="student-name">${person.name}</p>
+    `;
     return card;
   };
   
-  // RENDERIZADOR 1: VÍDEOS (sem alterações)
-  const renderVideos = (filter) => {
+  // RENDERIZADOR 1: LEMBRANÇAS (MODIFICADO para usar a nova função de card)
+  const renderMemories = () => {
     galleryGrid.innerHTML = '';
-    const filteredMemories = allMemories.filter(memory => memory.category === filter);
+    // Filtra para a categoria "eventos" que não sejam SPFs para a página principal
+    const filteredMemories = allMemories.filter(memory => memory.category === 'eventos');
     filteredMemories.forEach(memory => {
-      const card = createVideoCard(memory);
+      const card = createVideoCard(memory); // Agora usa a função atualizada
       galleryGrid.appendChild(card);
     });
   };
 
-  // RENDERIZADOR 2: ALUNOS
+  // RENDERIZADOR 2: ALUNOS (sem alterações)
   const renderStudents = () => {
     galleryGrid.innerHTML = '';
     allStudents.forEach(student => {
-      // Agora chama a função genérica
       const card = createPersonCard(student);
       galleryGrid.appendChild(card);
     });
   };
 
-  // RENDERIZADOR 3: PROFESSORES (NOVO)
+  // RENDERIZADOR 3: PROFESSORES (sem alterações)
   const renderTeachers = () => {
     galleryGrid.innerHTML = '';
     allTeachers.forEach(teacher => {
-      // Também chama a função genérica
       const card = createPersonCard(teacher);
       galleryGrid.appendChild(card);
     });
@@ -92,10 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
       
       if (category === 'alunos') {
         renderStudents();
-      } else if (category === 'professores') { // Novo "else if"
+      } else if (category === 'professores') {
         renderTeachers();
-      } else {
-        renderVideos(category);
+      } else if (category === 'eventos') { // Modificado para chamar renderMemories
+        renderMemories();
       }
     });
   });
@@ -106,10 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const response = await fetch('data.json');
       const data = await response.json();
       allStudents = data.students;
-      allTeachers = data.teachers; // Carrega os professores
+      allTeachers = data.teachers;
       allMemories = data.memories;
       
-      renderStudents(); // Continua iniciando pela página de alunos
+      // Define a aba 'Alunos' como ativa e renderiza seu conteúdo
+      document.querySelector('.nav-item[data-category="alunos"]').classList.add('active');
+      renderStudents();
     } catch (error) {
       console.error('Erro ao carregar os dados:', error);
       galleryGrid.innerHTML = '<p>Não foi possível carregar o conteúdo. Tente novamente mais tarde.</p>';

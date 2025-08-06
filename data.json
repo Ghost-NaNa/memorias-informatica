@@ -10,11 +10,11 @@
     },
     {
       "name": "Matheus gabriel",
-      "photo": "assets/photos/aluno3.jpg"
+      "photo": "assets/photos/math.jpg"
     },
     {
-      "name": "Gabriel Anjos",
-      "photo": "assets/photos/aluno4.jpg"
+      "name": "Paulo H. de Jesus",
+      "photo": "assets/photos/nok.jpg"
     },
     {
       "name": "Nathan de Oliveira",
@@ -54,6 +54,24 @@
   "memories": [
     {
       "category": "eventos",
+      "thumbnail": "caminho/para/thumbnail_da_spf.jpg",
+      "video": "", 
+      "title": "SPf 2023" 
+    },
+    {
+      "category": "eventos",
+      "thumbnail": "caminho/para/thumbnail_da_spf.jpg",
+      "video": "", 
+      "title": "SPf 2024" 
+    },
+    {
+      "category": "eventos",
+      "thumbnail": "caminho/para/thumbnail_da_spf.jpg",
+      "video": "", 
+      "title": "SPf 2025" 
+    },
+    {
+      "category": "eventos",
       "thumbnail": "assets/thumbnails/interclasse.jpg",
       "video": "assets/videos/interclasse.mp4",
       "title": "Interclasse"
@@ -72,9 +90,52 @@
     },
     {
       "category": "eventos",
+      "spf_group": "spf 2025",
       "thumbnail": "assets/thumbnails/dedetata.jpg",
       "video": "assets/videos/tarsisderik.mp4",
-      "title": "Os cara que dança"
+      "title": "O sonho de icaro"
+    },
+    {
+      "category": "eventos",
+      "spf_group": "spf 2025",
+      "thumbnail": "assets/thumbnails/dedetata.jpg",
+      "video": "assets/videos/tarsisderik.mp4",
+      "title": "Dança remix"
+    },
+    {
+      "category": "eventos",
+      "spf_group": "spf 2025",
+      "thumbnail": "assets/thumbnails/dedetata.jpg",
+      "video": "assets/videos/tarsisderik.mp4",
+      "title": "Sambinha"
+    },
+    {
+      "category": "eventos",
+      "spf_group": "spf 2025",
+      "thumbnail": "assets/thumbnails/dedetata.jpg",
+      "video": "assets/videos/tarsisderik.mp4",
+      "title": "Tango"
+    },
+    {
+      "category": "eventos",
+      "spf_group": "spf 2025",
+      "thumbnail": "assets/thumbnails/dedetata.jpg",
+      "video": "assets/videos/tarsisderik.mp4",
+      "title": "Dança trocada"
+    },
+    {
+      "category": "eventos",
+      "spf_group": "spf 2025",
+      "thumbnail": "assets/thumbnails/dedetata.jpg",
+      "video": "assets/videos/tarsisderik.mp4",
+      "title": "Slam"
+    },
+    {
+      "category": "eventos",
+      "spf_group": "spf 2025", 
+      "thumbnail": "assets/thumbnails/giovanna.jpg",
+      "video": "caminho/para/video1.mp4",
+      "title": "Cantora"
     }
   ]
 }
