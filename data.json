@@ -1,15 +1,15 @@
 {
   "students": [
     {
-      "name": "Raissa",
-      "photo": "assets/photos/house.jpg"
+      "name": "Raissa Miranda",
+      "photo": "assets/photos/raissa.webp"
     },
     {
-      "name": "Yasmim tresseno",
-      "photo": "assets/photos/aluno2.jpg"
+      "name": "Yasmim Tresseno",
+      "photo": "assets/photos/yas.png"
     },
     {
-      "name": "Matheus gabriel",
+      "name": "Math. Gabriel",
       "photo": "assets/photos/math.jpg"
     },
     {
@@ -18,19 +18,19 @@
     },
     {
       "name": "Nathan de Oliveira",
-      "photo": "assets/photos/aluno5.jpg"
+      "photo": "assets/photos/nathan.webp"
     },
     {
-      "name": "Derik de Souza",
-      "photo": "assets/photos/aluno6.jpg"
+      "name": "Derik Olian",
+      "photo": "assets/photos/derik.webp"
     },
     {
       "name": "Fernanda Araújo",
-      "photo": "assets/photos/aluno7.jpg"
+      "photo": "assets/photos/fernanda.webp"
     },
     {
       "name": "Flávio Sandri",
-      "photo": "assets/photos/aluno8.jpg"
+      "photo": "assets/photos/flavio.webp"
     }
   ],
   "teachers": [
@@ -39,7 +39,7 @@
       "photo": "assets/photos/prof1.jpg"
     },
     {
-      "name": "Profa. Ingryde",
+      "name": "Profa. Ingryd",
       "photo": "assets/photos/prof2.jpg"
     },
     {
@@ -54,19 +54,19 @@
   "memories": [
     {
       "category": "eventos",
-      "thumbnail": "caminho/para/thumbnail_da_spf.jpg",
+      "thumbnail": "assets/thumbnails/spf2023.jpeg",
       "video": "", 
       "title": "SPf 2023" 
     },
     {
       "category": "eventos",
-      "thumbnail": "caminho/para/thumbnail_da_spf.jpg",
+      "thumbnail": "assets/thumbnails/spf2024.jpeg",
       "video": "", 
       "title": "SPf 2024" 
     },
     {
       "category": "eventos",
-      "thumbnail": "caminho/para/thumbnail_da_spf.jpg",
+      "thumbnail": "assets/thumbnails/spf2025.jpegs",
       "video": "", 
       "title": "SPf 2025" 
     },
@@ -91,43 +91,43 @@
     {
       "category": "eventos",
       "spf_group": "spf 2025",
-      "thumbnail": "assets/thumbnails/dedetata.jpg",
+      "thumbnail": "assets/thumbnails/yastarsis.jpeg",
       "video": "assets/videos/tarsisderik.mp4",
-      "title": "O sonho de icaro"
+      "title": "Música"
     },
     {
       "category": "eventos",
       "spf_group": "spf 2025",
       "thumbnail": "assets/thumbnails/dedetata.jpg",
-      "video": "assets/videos/tarsisderik.mp4",
-      "title": "Dança remix"
+      "video": "assets/videos/dancaTarsis.mp4",
+      "title": "Dance Remix"
     },
     {
       "category": "eventos",
       "spf_group": "spf 2025",
-      "thumbnail": "assets/thumbnails/dedetata.jpg",
-      "video": "assets/videos/tarsisderik.mp4",
-      "title": "Sambinha"
+      "thumbnail": "assets/thumbnails/samba.jpeg",
+      "video": "assets/videos/samba.mp4",
+      "title": "Samba"
     },
     {
       "category": "eventos",
       "spf_group": "spf 2025",
-      "thumbnail": "assets/thumbnails/dedetata.jpg",
-      "video": "assets/videos/tarsisderik.mp4",
+      "thumbnail": "assets/thumbnails/tango.jpeg",
+      "video": "assets/videos/tango.mp4",
       "title": "Tango"
     },
     {
       "category": "eventos",
       "spf_group": "spf 2025",
-      "thumbnail": "assets/thumbnails/dedetata.jpg",
-      "video": "assets/videos/tarsisderik.mp4",
-      "title": "Dança trocada"
+      "thumbnail": "assets/thumbnails/wagner.jpeg",
+      "video": "assets/videos/dancaTrocada.mp4",
+      "title": "Dança do Troca"
     },
     {
-      "category": "eventos",
+      "category": "eventos", 
       "spf_group": "spf 2025",
-      "thumbnail": "assets/thumbnails/dedetata.jpg",
-      "video": "assets/videos/tarsisderik.mp4",
+      "thumbnail": "assets/thumbnails/gabriel.jpeg",
+      "video": "assets/videos/video.mp4",
       "title": "Slam"
     },
     {
